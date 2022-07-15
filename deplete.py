@@ -101,9 +101,7 @@ class KAdb:
 
     def cleanup(self):
         tables = [
-            'poschecksunmappeditems',
-            'posunmappeditems',
-            'posmenuunmappeditems'
+            ''
         ]
         logger.debug('Cleaning up remnant table values.')
         for value in ['instore_TEST', 'kfcinstore_TEST']:
