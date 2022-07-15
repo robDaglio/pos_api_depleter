@@ -1,7 +1,7 @@
 FROM kitchenbrains/centos7python379
 
 LABEL project="POS API Acceptance Test"
-LABEL maintainer="support@kitchenbrains.com"
+LABEL maintainer="mail@mailer.com"
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
