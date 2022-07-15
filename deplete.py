@@ -137,31 +137,7 @@ def generate_xml_payload(endpoint):
     non_depleting = 'false' if not cfg.non_depleting else 'true'
     test_id = f'{endpoint}_TEST'
 
-    payload = f'''<!DOCTYPE ProductEvent>
-        <ProductEvent Version='2.0'>
-        <EventID>000000</EventID>
-        <DeviceID>1</DeviceID>
-        <ServerID>1</ServerID>
-        <Date>{d}</Date>
-        <Time>{t}</Time>
-
-        <ProductEventType>{cfg.product_event_type}</ProductEventType>
-        <PosSystemIdentifier>1</PosSystemIdentifier>
-        <Stage>{cfg.stage}</Stage>
-        <NonDepleting>{non_depleting}</NonDepleting>
-
-        <Product>
-            <ID>{test_id}</ID>
-            <Name>{test_id}</Name>
-            <Qty>{cfg.product_quantity}</Qty>
-            <UnitCost>{cfg.unit_cost}</UnitCost>
-            <ItemTotal>{cfg.item_total}</ItemTotal>
-        </Product>
-
-        <SubTotal>2</SubTotal>
-        <Tax>1,00</Tax>
-        <Total>2,00</Total>
-    </ProductEvent>
+    payload = f'''
     '''
 
     logger.debug(f'ID: {test_id} | Payload: {payload}')
